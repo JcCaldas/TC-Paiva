@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,600;0,900;1,400&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <title>Ten Cel BM Paiva</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Tenente Coronel BM Scharlyston Martins  de Paiva</h1>
+    </header>
+    <main class="container flex-container">
+        <!-- MIDIAS SOCIAIS -->
+        <div class="midias-sociais bg-black">
+            <div class="itens-midias">
+                <a href="https://www.instagram.com/celpaivabr/" target="_blank"><img src="./img/Instagram-Icon.png" alt="Icone do Instagram"></a>
+                <a href="https://www.instagram.com/celpaivabr/" target="_blank"><h3>Instagram</h3></a>
+            </div>
+            <div class="itens-midias">
+                <a href="https://www.facebook.com/coronelpaivabr" target="_blank"><img src="./img/facebook-icon.png" alt="Icone do Facebook"></a>
+                <a href="https://www.facebook.com/coronelpaivabr" target="_blank"><h3>Facebook</h3></a>
+            </div>
+            <div class="itens-midias">
+                <a href="https://www.linkedin.com/in/coronel-scharlyston-paiva-36a31342" target="_blank"><img src="/img/linkedin-icon.png" alt="Icone do Linkedin"></a>
+                <a href="https://www.linkedin.com/in/coronel-scharlyston-paiva-36a31342" target="_blank"><h3>Linkedin</h3></a>
+            </div>
+        </div>
+        
+        <!-- BANNER -->
+        <div id="slider">
+            <a class="control_next">&gt;</a>
+            <a class="control_prev">&lt;</a>
+            <ul>
+                <li><img src="/img/001a-comandante_pronto.png" alt="Comandando Operação"></li>
+                <li><img src="/img/002-Chap80_pronto.png" alt="Fundação Chapter 80 - Brazil"></li>
+                <li><img src="/img/003-LIGABOM001_pronto.png" alt="Presidente do Comitê Nacional de Perícia de Incêndio"></li>
+                <li><img src="/img/003-A-LIGABOM002pronto.png" alt="Presidente do Comitê Nacional de Perícia de Incêndio"></li>
+                <li><img src="/img/004-cfi_pronto.png" alt="IAAI-CFI"></li>
+                <li><img src="/img/005-fit_pronto.png" alt="IAAI-FIT"></li>
+                <li><img src="/img/006-ci_pronto.png" alt="IAAI-CI"></li>
+                <li><img src="/img/007-ect_pronto.png" alt="IAAI-ECT"></li>
+                <li><img src="/img/008-Perito_pronto.png" alt="Perito de Incêndio"></li>
+                <li> <img src="/img/009-Instrutor_pronto.png" alt="Instrutor do Curso de Perícia de Incêndio"></li>
+                <li><img src="/img/010-SENAPI_pronto.png" alt="Palestrante"></li>
+            </ul>
+        </div>
+        <!-- CURRICULUM -->
+        <div class="secao bg-black">
+            <div class="item">
+                <img src="/img/logo_CBMES_2018.png" alt="Logo CBMES">
+                <h3>Comandante:<br>1º Batalhão de Bombeiros Militar<br>do Estado do Espírito Santo</h3>
+            </div>
+            <div class="item">
+                <img src="/img/cda-pericia.png" alt="CDA de Perícia de Incêndio">
+                <h3>Coordenador:<br>Comitê de Desenvolvimento de Atividade<br>Operacional de Perícia de Incêndios</h3>
+            </div>
+            <div class="item">
+                <img src="/img/abinvi_chap80.png" alt="IAAI - Chapter 80 - Brazil (ABINVI)">
+                <h3>Presidente e Fundador:<br>IAAI - Chapter 80 - Brazil<br>Associação Brasileira de<br>Investigadores de Incêndio</h3>
+            </div>
+            <div class="item">
+                <img src="/img/ligabom_logo.png" alt="Logo LIGABOM">
+                <h3>Presidente:<br>Comitê Nacional de<br>Perícia de Incêndio (LIGABOM)</h3>
+            </div>
+        </div>
+        <!-- CERTIFICACOES -->
+        <div class="certificacao bg-white">
+            <h2>Certificações</h2>
+            <div class="conjunto">
+                <div class="item">
+                    <img src="/img/CFI.png" alt="">
+                    <h3>IAAI-CFI<br>Certified Fire Investigator</h3>
+                </div>
+                <div class="item">
+                    <img src="/img/FIT.png" alt="">
+                    <h3>IAAI-FIT<br>Fire Investigation Technician</h3>
+                </div>
+                <div class="item">
+                    <img src="/img/CI.png" alt="">
+                    <h3>IAAI-CI<br>Certified Instructor</h3>
+                </div>
+                <div class="item">
+                    <img src="/img/ECT.png" alt="">
+                    <h3>IAAI-ECT<br>Evidence Colection Technician</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a href="mailto:jessencaldas@gmail.com">Jessé Caldas</a></p>
+    </footer>
+    <!-- JQUERY SLIDER -->
+    <script>
+        $(function() {
+        $('#checkbox').change(function () {
+            setInterval(function () {
+                moveRight();
+            }, 3000);
+        });
+        var slideCount = $('#slider ul li').length;
+        var slideWidth = $('#slider ul li').width();
+        var slideHeight = $('#slider ul li').height();
+        var sliderUlWidth = slideCount * slideWidth;
+        $('#slider').css({
+            width: slideWidth,
+            height: slideHeight
+        });
+        $('#slider ul').css({
+            width: sliderUlWidth,
+            marginLeft: -slideWidth
+        });
+        $('#slider ul li:last-child').prependTo('#slider ul');
+        function moveLeft() {
+            $('#slider ul').animate({
+                left: +slideWidth
+            }, 200, function () {
+                $('#slider ul li:last-child').prependTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+        function moveRight() {
+            $('#slider ul').animate({
+                left: -slideWidth
+            }, 200, function () {
+                $('#slider ul li:first-child').appendTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+        $('a.control_prev').click(function () {
+            moveLeft();
+        });
+        $('a.control_next').click(function () {
+            moveRight();
+        });
+    });
+    </script>
+</body>
+</html>
