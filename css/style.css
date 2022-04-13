@@ -89,78 +89,10 @@ h3 {
     color: white;
 }
 
-/* SLIDER */
-
-#slider {
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    width: 900px;
-    height: 600px;
-    align-self: center;
-}
-
-#slider ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 200px;
-    list-style: none;
-    display: flex;
-}
-
-#slider ul li {
-    position: relative;
-    display: block;
-    /* float: left; */
-    margin: 0;
-    padding: 0;
-    width: 900px;
-    height: 600px;
-    text-align: center;
-    line-height: 300px;
-}
-
-a.control_prev, a.control_next {
-    position: absolute;
-    top: 40%;
-    z-index: 999;
-    display: block;
-    padding: 4% 3%;
-    width: auto;
-    height: auto;
-    background: #2a2a2a;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-a.control_prev:hover, a.control_next:hover {
-    opacity: 1;
-    -webkit-transition: all 0.2s ease;
-}
-
-a.control_prev {
-    border-radius: 0 2px 2px 0;
-}
-a.control_next {
-    right: 0%;
-    border-radius: 2px 0 0 2px;
-}
-.slider_option {
-    position: relative;
-    margin: 10px auto;
-    width: 160px;
-    font-size: 18px;
-}
-
 /* CURRICULO */
 
 .secao {
-    width: 900px;
+    width: 960px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -182,7 +114,7 @@ a.control_next {
 /* CERTIFICAÇÕES */
 
 .certificacao {
-    width: 900px;
+    width: 960px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -204,24 +136,27 @@ footer {
     max-width: auto;
 }
 
-footer a {
+footer a, footer a:hover {
     text-decoration: none;
+    color: white;
 }
 
-/* RESPONSIVIDADE GERAL */
-/* RESPONSIVIDADE MENOS SLIDER */
-@media screen and (min-width: 320px) and (max-width: 768px){
-    
-    body {
-        max-width: 100%;
-    }
+/* RESPONSIVIDADE 320px até 376px*/
+@media (min-width: 320px) and (max-width: 376px){
 
     .flex-container {
         align-items: center;
     }
 
     .midias-sociais{
-        align-self: center;
+        margin: 0 auto;
+        width: 60%;
+        justify-content: space-around;
+
+    }
+
+    .midias-sociais .itens-midias a h3 {
+        display: none;
     }
 
     .secao {
@@ -236,7 +171,7 @@ footer a {
     }
 
     .item img {
-        height: 100px;
+        height: 87px;
     }
 
     .certificacao{
@@ -249,139 +184,80 @@ footer a {
 
 }
 
-/* REPONSIVIDADE SLIDER */
+ /*RESPONSIVIDADE 376px até 426px */
+@media (min-width: 376px) and (max-width: 426px){
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    #slider, #slider ul, #slider ul li, #slider ul li img {
-        max-width: 100vw;
+    .flex-container {
+        align-items: center;
     }
 
-    #slider, #slider ul li {
-        max-height: 80vh;
-    }
-    
-    #slider {
-        position: relative;
-        overflow: hidden;
-        border-radius: 4px;
-        /* max-width: 100%;
-        max-height: 100%; */
-        align-self: center;
+    .midias-sociais{
+        margin: 0 auto;
+        width: 100%;
+        justify-content: space-around;
+
     }
 
-    #slider ul li {
-        position: relative;
-        display: block;
-        /* float: left; */
-        left: 17.2%;
-        margin: 0;
+    .secao {
+        width: 100%;
+        flex-direction: column;
         padding: 0;
-        /* width: 100%;
-        height: 100%; */
-        text-align: center;
-        line-height: 300px;
-    }
-
-    #slider ul {
-        position: relative;
         margin: 0;
-        padding: 0;
-        height: auto;
-        list-style: none;
-        display: flex;
-    }
-    
-    #slider ul li {
-        position: relative;
-        display: block;
-        /* float: left; */
-        margin: 0;
-        padding: 0;
-        /* width: 100%;
-        height: 100%; */
-        text-align: center;
-        /* line-height: 300px; */
     }
 
-    /* #slider ul li img{
-        max-width: 100%;
-    } */
-
-    a.control_prev {
-        left: 27.9%;
-        border-radius: 0 2px 2px 0;
+    .item {
+        width: 100%;
     }
-    a.control_next {
-        right: 27.9%;
-        border-radius: 2px 0 0 2px;
+
+    .item img {
+        height: 119px;
+    }
+
+    .certificacao{
+        width: 100%;
+    }
+
+    .conjunto {
+        flex-direction: column;
     }
 
 }
 
-@media screen and (min-width: 375px) and (max-width: 425px) {
-    #slider, #slider ul, #slider ul li, #slider ul li img {
-        max-width: 100vw;
+ /*RESPONSIVIDADE 426px até 769px */
+@media (min-width: 426px) and (max-width: 769px){
+
+    body {
+        width: 100%;
     }
 
-    #slider, #slider ul li {
-        height: 44vh;
-    }
-    
-    
-    #slider {
-        position: relative;
-        overflow: hidden;
-        border-radius: 4px;
-        /* max-width: 100%;
-        max-height: 100%; */
-        align-self: center;
+    .flex-container {
+        align-items: center;
     }
 
-    #slider ul li {
-        position: relative;
-        display: block;
-        /* float: left; */
-        left: 111.5%;
-        margin: 0;
+    .midias-sociais{
+        margin: 0 auto;
+        width: 100%;
+        justify-content: space-around;
+
+    }
+
+    .secao {
+        width: 100%;
+        flex-direction: column;
         padding: 0;
-        /* width: 100%;
-        height: 100%; */
-        text-align: center;
-        line-height: 300px;
-    }
-
-    #slider ul {
-        position: relative;
         margin: 0;
-        padding: 0;
-        height: auto;
-        list-style: none;
-        display: flex;
-    }
-    
-    #slider ul li {
-        position: relative;
-        display: block;
-        /* float: left; */
-        margin: 0;
-        padding: 0;
-        /* width: 100%;
-        height: 100%; */
-        text-align: center;
-        /* line-height: 300px; */
     }
 
-    /* #slider ul li img{
-        max-width: 100%;
-    } */
-
-    a.control_prev {
-        left: 27.9%;
-        border-radius: 0 2px 2px 0;
+    .item {
+        width: 100%;
     }
-    a.control_next {
-        right: 27.9%;
-        border-radius: 2px 0 0 2px;
+
+    .certificacao{
+        width: 100%;
+    }
+
+    .conjunto {
+        flex-direction: column;
     }
 
 }
